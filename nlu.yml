@@ -1,0 +1,127 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - yo
+    - sup
+    - wassup
+    - whaddup
+    - heyo
+    - hiya
+    - heya   
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - ciao
+    - seeya
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yep
+    - yeah
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - nah
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you?
+    - what are you?
+
+#- intent: reveal
+ # examples: |
+ #   - I want a movie about [love](keywords)
+ #   - I want a movie from [2020](release_year)
+ #   - I want a movie that features [Anne Hathaway](person_names)
+#    - I want a movie starring [Anne Hathaway](person_names) 
+#    - I want a movie similar to [Love, Actually](movie_title)
+#    - Recommend me a movie about [war](keywords)
+#    - Recommend me a movie starring [Hugh Grant](person_names)
+#    - Recommend me a movie that features [Hugh Grant](person_names)
+#    - Recommend me a movie similar to [Dunkirk](movie_title)
+#    - Recommend me a movie from [1999](release_year)
+#    - Can you recommend something about [dogs](keywords)?
+
+
+- intent: reveal_by_genre
+  examples: |
+    - Can you suggest a [comedy](genres) movie?
+    - I want a [romantic](genres) [comedy](genres)
+    - Recommend me an [action](genres) film

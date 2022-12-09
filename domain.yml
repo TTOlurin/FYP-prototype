@@ -1,0 +1,84 @@
+version: "3.1"
+
+actions:
+- action_get_movie_on_genre
+
+
+entities:
+- movie_title
+- genres
+- keywords
+- person_names
+- release_year
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+#  - reveal
+  - reveal_by_genre
+
+slots:
+  movie_title:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: movie_title
+  genres:
+    type: list
+    mappings:
+    - type: from_entity
+      entity: genres
+  keywords:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: keywords
+  person_names:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: person_names
+  release_year:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: release_year
+
+responses:
+  utter_greet:
+  - text: "Hey! What can I recommend you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye ^-^"
+
+  utter_iamabot:
+  - text: "My name is Reeli and I am a movie recommender bot built by Titi, and powered by Rasa."
+
+  utter_recommend_by_genre:
+  - text: "I have found a {genres} movie:"
+
+  utter_ask_satisfied:
+  - text: "Are you happy with this recommendation?"
+
+  utter_unclear:
+  - text: "Sorry I didn't quite get that. Can you rephrase?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
